@@ -1,0 +1,15 @@
+Report
+    attribute
+        homeTeam
+        awayTeam
+        homeScore
+        awayScore
+        misconduct
+
+Misconduct
+    team
+    playerName
+    cardColor
+    minute
+    type
+
