@@ -1,0 +1,5 @@
+  home       away 
+Arsenal     FC Barcelona
+   2           3
+-- Player: Gavi, Player Id: 654, Number: 6, Team: FC Barcelona, YC/RC: yc, Code: 65, Time: 65
+-- Player: Saka, Player Id: 12356, Number: 7, Team: Arsenal, YC/RC: yc, Code: ub, Time: 87

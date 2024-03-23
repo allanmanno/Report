@@ -1,23 +1,69 @@
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Card {
 
-    private final String homeTeam;
-    private final String awayTeam;
+    String team, playerName, code, type;
+    int playerId, time, number;
+    Scanner scanner =new Scanner(System.in);
 
-    public Card(String homeTeam, String awayTeam) {
-
-        this.homeTeam = homeTeam;
-        this.awayTeam = awayTeam;
+    void newCard(){
+        getPlayerName();
+        getPlayerId();
+        getNumber();
+        getTeam();
+        getType();
+        getCode();
+        getTime();
     }
 
-    public String getHomeTeam() {
-        return homeTeam;
+    private void getPlayerName() {
+        System.out.print("Player: ");
+        playerName = scanner.nextLine();
     }
 
-    public String getAwayTeam() {
-        return awayTeam;
+    private void getPlayerId() {
+        System.out.print("Player ID: ");
+        playerId = scanner.nextInt();
+        scanner.nextLine();
     }
 
-    void out(){
-
+    private void getNumber(){
+        System.out.print("Number: ");
+        number = scanner.nextInt();
+        scanner.nextLine();
     }
+
+    private void getTeam() {
+        System.out.print("Team: ");
+        team = scanner.nextLine();
+    }
+
+    private void getType() {
+        System.out.print("YC/RC: ");
+        type = scanner.nextLine();
+        while(true){
+            if(Objects.equals(type, "YC") || Objects.equals(type, "Yc") || Objects.equals(type, "yc") ||
+                    Objects.equals(type, "RC") || Objects.equals(type, "Rc") || Objects.equals(type, "rc")){
+                break;
+            }
+            else {
+                System.out.println("wrong input");
+                System.out.print("YC/RC: ");
+                type = scanner.nextLine();
+            }
+        }
+    }
+
+    private void getCode() {
+        System.out.print("Card Code: ");
+        code = scanner.nextLine();
+    }
+
+    private void getTime() {
+        System.out.print("Time: ");
+        time = scanner.nextInt();
+        scanner.nextLine();
+    }
+
 }
